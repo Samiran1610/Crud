@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{% block content %}
+
+
+    <h1 class="text-center my-4">Welcome To Hospital</h1>
+    <div class="container">
+        <!-- Add Patient Button -->
+        <div class="mb-3 text-end">
+            <a href="" class="btn btn-primary">Add Patient Details</a>
+        </div>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Blood Group</th>
+                    <th>Age</th>
+                    <th>Disease</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in AllPost %}
+                <tr>
+                    <td>{{ post.Name }}</td>
+                    <td>{{ post.Blood_group }}</td>
+                    <td>{{ post.Age }}</td>
+                    <td>{{ post.Disease }}</td>
+                    <td>{{ post.Location }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    {% endblock %}
+
+
